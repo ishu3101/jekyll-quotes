@@ -1,0 +1,4 @@
+---
+---
+{% for quote in site.data.quotes %}{{ quote.quote }} - {{ quote.author }}
+{% endfor %}

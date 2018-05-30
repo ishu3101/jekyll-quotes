@@ -1,0 +1,10 @@
+---
+---
+
+[{% for quote in site.data.quotes %}
+  {
+    "id": "{{ forloop.index }}",
+    "quote": "{{ quote.quote }}",
+    "author": "{{ quote.author }}"
+  }{% if forloop.last == false %},{% endif %}{% endfor %}
+]
