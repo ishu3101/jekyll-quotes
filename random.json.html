@@ -1,0 +1,17 @@
+---
+---
+
+<body>
+    <pre id="json"></pre>
+    <script>
+      var quotes = {{ site.data.quotes | jsonify }};
+      console.log(quotes);
+      
+      var random_quote = quotes[Math.floor(Math.random()*quotes.length)];
+      console.log(random_quote);
+      
+      document.getElementById("json").innerHTML = JSON.stringify(random_quote);
+      
+    </script>
+
+</body>
